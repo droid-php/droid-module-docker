@@ -1,0 +1,30 @@
+project:
+    name: "droid/docker"
+    description: "Install Docker to Ubuntu"
+
+tasks:
+    -
+      name: "Copy the docker defaults file to the host"
+      command: "fs:copy"
+      arguments:
+          src: "!{{{ mod_path }}}/assets/etc/default/docker.template"
+          dest: "/tmp/docker"
+    -
+      name: "Copy the docker systemd drop-in file to the host"
+      command: "fs:copy"
+      arguments:
+          src: "!{{{ mod_path }}}/assets/etc/systemd/system/docker.service.d/custom-exec-start.conf.template"
+          dest: "/tmp/custom-exec-start.conf"
+    -
+      name: "Copy the docker installation script to the host"
+      command: "fs:copy"
+      arguments:
+          src: "!{{{ mod_path }}}/assets/install-docker.sh"
+          dest: "/tmp/install-docker.sh"
+    -
+      name: "Execute the docker installation script"
+      command: "shell:exec"
+      max_runtime: 330
+      arguments:
+          command-line: "/bin/bash /tmp/install-docker.sh"
+          timeout: 300
