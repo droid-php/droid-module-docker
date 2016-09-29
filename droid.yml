@@ -27,4 +27,3 @@ tasks:
       max_runtime: 330
       arguments:
           command-line: "/bin/bash /tmp/install-docker.sh"
-          timeout: 300
