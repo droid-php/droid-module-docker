@@ -1,4 +1,4 @@
-# Droid Module: droid/docker
+# Droid Module: docker
 
 Install Docker to Ubuntu Trusty and later. For more information on Droid,
 please see [droidphp.com](http://droidphp.com).

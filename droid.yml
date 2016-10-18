@@ -1,6 +1,4 @@
-project:
-    name: "droid/docker"
-    description: "Install Docker to Ubuntu"
+description: "Install Docker to Ubuntu"
 
 tasks:
     -
