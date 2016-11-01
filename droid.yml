@@ -1,5 +1,8 @@
 description: "Install Docker to Ubuntu"
 
+variables:
+    use_legacy_templating: true
+
 tasks:
     -
       name: "Copy the docker defaults file to the host"
