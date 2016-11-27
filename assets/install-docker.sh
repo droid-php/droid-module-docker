@@ -67,7 +67,7 @@ sudo apt-get install apt-transport-https ca-certificates \
 	&& sudo apt-get update \
 	&& sudo apt-get purge lxc-docker \
 	&& sudo apt-get -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" \
-		install -y linux-image-extra-$(uname -r) linux-image-extra-virtual docker-engine;
+		install -y linux-image-extra-virtual docker-engine;
 
 if [[ $DISTRIB_CODENAME != "trusty" ]]
 then
